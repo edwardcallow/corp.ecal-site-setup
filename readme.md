@@ -61,3 +61,5 @@ corp.ecal network site landing page config
 
 7. Replace ‘172.16.10.0/16’ with the IP range and subnet for your network.
 8. Reboot with `sudo reboot`.
+
+### Section 7 — landing page
