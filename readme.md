@@ -73,4 +73,7 @@ corp.ecal network site landing page config
 	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
 
 5. Make sure the lighttpd user (www-data) can read the certificates with `sudo chown www-data -R /etc/letsencrypt/live`.
-6. Open ‘/etc/lighttpd/external.conf’ and add the contents of `following lines the the end:
+6. Open ‘/etc/lighttpd/external.conf’ and add the contents of `https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/external.conf` to the end (replacing ‘pihole.example.com’ with the domain or subdomain to be used).
+7. Restart the web server with `sudo service lighttpd restart`.
+
+### Section 8 — landing page
