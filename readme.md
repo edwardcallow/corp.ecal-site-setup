@@ -37,12 +37,13 @@ corp.ecal network site server config
 12. Restart the cron server to make sure the new job is actioned with `sudo service cron reload`.
 
 ### Section 5: Pi-hole
-1. Start the Pi-hole installer with `curl -sSL https://install.pi-hole.net | bash`.
-2. Follow the Pi-hole installer.
-3. Once the installer’s finished, reset the admin password for Pi-hole with `pihole -a -p`.
-4. Finish setting up Pi-hole via the web interface.
-5. Change the interfaces Pi-hole listens on (via Settings > DNS > Interface listening behaviour) to ‘Listen on all interfaces’.
-6. Reboot with `sudo reboot`.
+1. Make a new directory to keep things tidy with `mkdir vpn`.
+2. Start the Pi-hole installer with `curl -sSL https://install.pi-hole.net | bash`.
+3. Follow the Pi-hole installer.
+4. Once the installer’s finished, reset the admin password for Pi-hole with `pihole -a -p`.
+5. Finish setting up Pi-hole via the web interface.
+6. Change the interfaces Pi-hole listens on (via Settings > DNS > Interface listening behaviour) to ‘Listen on all interfaces’.
+7. Reboot with `sudo reboot`.
 
 ### Section 6: VPN
 1. Download the VPN setup script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/vpnsetup.sh -O vpn/vpnsetup.sh`.
