@@ -62,4 +62,12 @@ corp.ecal network site landing page config
 7. Replace ‘172.16.10.0/16’ with the IP range and subnet for your network.
 8. Reboot with `sudo reboot`.
 
-### Section 7 — landing page
+### Section 7 — SSL
+1. Install certbot with `sudo apt-get install certbot`.
+2. Run the installer in webroot mode with `sudo certbot certonly --webroot`.
+3. Follow the Certbot installer.
+4. Generate a combined certificate and private key file by running the following command (replacing ‘pihole.example.com’ with the domain or subdomain to be used):
+
+	sudo cat /etc/letsencrypt/live/pihole.example.com/privkey.pem \
+	/etc/letsencrypt/live/pihole.example.com/cert.pem | \
+	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
