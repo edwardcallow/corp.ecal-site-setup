@@ -49,7 +49,7 @@ corp.ecal network site landing page config
 3. Replace ‘your.user.name’ on line 28 with your first user’s username.
 4. Replace ‘your password’ on line 29 with your first user’s password.
 5. Run the installer with `sudo sh vpnsetup.sh`.
-6. Open ‘/etc/iptables.rules’ and add the following lines the the end:
+6. Open ‘/etc/iptables.rules’ and add the following lines to the end:
 
 	\# For IPsec/L2TP  
 	iptables -I FORWARD 2 -i ppp+ -d 172.16.0.0/16 -j ACCEPT  
@@ -69,7 +69,8 @@ corp.ecal network site landing page config
 4. Generate a combined certificate and private key file by running the following command (replacing ‘pihole.example.com’ with the domain or subdomain to be used):
 
 	sudo cat /etc/letsencrypt/live/pihole.example.com/privkey.pem \  
-			/etc/letsencrypt/live/pihole.example.com/cert.pem | \  
+	/etc/letsencrypt/live/pihole.example.com/cert.pem | \  
 	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
 
-5. 
+5. Make sure the lighttpd user (www-data) can read the certificates with `sudo chown www-data -R /etc/letsencrypt/live`.
+6. Open ‘/etc/lighttpd/external.conf’ and add the contents of `following lines the the end:
