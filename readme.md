@@ -75,5 +75,11 @@ corp.ecal network site landing page config
 5. Make sure the lighttpd user (www-data) can read the certificates with `sudo chown www-data -R /etc/letsencrypt/live`.
 6. Open ‘/etc/lighttpd/external.conf’ and add the contents of `https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/external.conf` to the end (replacing ‘pihole.example.com’ with the domain or subdomain to be used).
 7. Restart the web server with `sudo service lighttpd restart`.
+8. Reboot with `sudo reboot`.
 
 ### Section 8: Landing page
+1. Download the Landing page template with `git clone https://github.com/edwardcallow/corp.ecal-landing.git /var/www/html`.
+2. Enter the web server root directory with `cd /var/www/html`.
+3. Delete the unnecessary readme with `sudo rm readme.md`.
+4. Open and make any relevant changes to ‘landing.php’.
+5. Choose an accent colour in ‘style.css’.
