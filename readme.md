@@ -29,7 +29,7 @@ corp.ecal network site landing page config
 5. Replace ‘example.com’ on line 10 with the root domain to be used.
 6. Replace ‘home.example.com’ on line 11 with the domain or subdomain to be updated.
 7. Save the file.
-8. Change the file permissions to be executable with `chmod +x cloudflare/lwp-cloudflare-dyndns.sh`.
+8. Change the file permissions to be executable with `chmod +x lwp-cloudflare-dyndns.sh`.
 9. Run the file with `sudo sh lwp-cloudflare-dyndns.sh`. The IP will be updated and three new files should be generated.
 10. Start setting up a cron job to automate the updating with `crontab -e`, then choosing a text editor.
 11. Add a new line to the bottom of the crontab file (changing the timing stars as appropriate – default every five minutes) – `*/5 * * * * /bin/bash /home/pi/cloudflare/lwp-cloudflare-dyndns.sh`.
@@ -69,5 +69,7 @@ corp.ecal network site landing page config
 4. Generate a combined certificate and private key file by running the following command (replacing ‘pihole.example.com’ with the domain or subdomain to be used):
 
 	sudo cat /etc/letsencrypt/live/pihole.example.com/privkey.pem \  
-	/etc/letsencrypt/live/pihole.example.com/cert.pem | \  
+			/etc/letsencrypt/live/pihole.example.com/cert.pem | \  
 	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
+
+5. 
