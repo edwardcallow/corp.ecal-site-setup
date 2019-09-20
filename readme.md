@@ -78,7 +78,7 @@ corp.ecal network site landing page config
 8. Reboot with `sudo reboot`.
 
 ### Section 8: Landing page
-1. Download the Landing page template with `git clone https://github.com/edwardcallow/corp.ecal-landing.git /var/www/html`.
+1. Download the [Landing page template](https://github.com/edwardcallow/corp.ecal-landing) with `git clone https://github.com/edwardcallow/corp.ecal-landing.git /var/www/html`.
 2. Enter the web server root directory with `cd /var/www/html`.
 3. Delete the unnecessary readme with `sudo rm readme.md`.
 4. Open and make any relevant changes to ‘landing.php’.
