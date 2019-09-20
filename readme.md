@@ -37,21 +37,21 @@ corp.ecal network site server config
 12. Restart the cron server to make sure the new job is actioned with `sudo service cron reload`.
 
 ### Section 5: Pi-hole
-1. Make a new directory to keep things tidy with `mkdir vpn`.
-2. Start the Pi-hole installer with `curl -sSL https://install.pi-hole.net | bash`.
-3. Follow the Pi-hole installer.
-4. Once the installer’s finished, reset the admin password for Pi-hole with `pihole -a -p`.
-5. Finish setting up Pi-hole via the web interface.
-6. Change the interfaces Pi-hole listens on (via Settings > DNS > Interface listening behaviour) to ‘Listen on all interfaces’.
-7. Reboot with `sudo reboot`.
+1. Start the Pi-hole installer with `curl -sSL https://install.pi-hole.net | bash`.
+2. Follow the Pi-hole installer.
+3. Once the installer’s finished, reset the admin password for Pi-hole with `pihole -a -p`.
+4. Finish setting up Pi-hole via the web interface.
+5. Change the interfaces Pi-hole listens on (via Settings > DNS > Interface listening behaviour) to ‘Listen on all interfaces’.
+6. Reboot with `sudo reboot`.
 
 ### Section 6: VPN
-1. Download the VPN setup script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/vpnsetup.sh -O vpn/vpnsetup.sh`.
-2. Replace ‘your pre shared key’ on line 27 with your chosen shared secret. 
-3. Replace ‘your.user.name’ on line 28 with your first user’s username.
-4. Replace ‘your password’ on line 29 with your first user’s password.
-5. Run the installer with `sudo sh vpnsetup.sh`.
-6. Open ‘/etc/iptables.rules’ and add the following lines to the end (replacing ‘172.16.10.0/16’ with the IP range and subnet for your network):
+1. Make a new directory to keep things tidy with `mkdir vpn`.
+2. Download the VPN setup script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/vpnsetup.sh -O vpn/vpnsetup.sh`.
+3. Replace ‘your pre shared key’ on line 27 with your chosen shared secret. 
+4. Replace ‘your.user.name’ on line 28 with your first user’s username.
+5. Replace ‘your password’ on line 29 with your first user’s password.
+6. Run the installer with `sudo sh vpnsetup.sh`.
+7. Open ‘/etc/iptables.rules’ and add the following lines to the end (replacing ‘172.16.10.0/16’ with the IP range and subnet for your network):
 
 	\# For IPsec/L2TP  
 	iptables -I FORWARD 2 -i ppp+ -d 172.16.0.0/16 -j ACCEPT  
