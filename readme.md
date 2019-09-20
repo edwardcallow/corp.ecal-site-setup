@@ -32,6 +32,5 @@ corp.ecal network site landing page config
 8. Change the file permissions to be executable with `chmod +x cloudflare/lwp-cloudflare-dyndns.sh`.
 9. Run the file with `sudo sh lwp-cloudflare-dyndns.sh`. The IP will be updated and three new files should be generated.
 10. Start setting up a cron job to automate the updating with `crontab -e`, then choosing a text editor.
-11. Add a new line to the bottom of the crontab file (changing the timing stars as appropriate – default every five minutes):
-> `*/5 * * * * /bin/bash /home/pi/cloudflare/lwp-cloudflare-dyndns.sh`
+11. Add a new line to the bottom of the crontab file (changing the timing stars as appropriate – default every five minutes) – `*/5 * * * * /bin/bash /home/pi/cloudflare/lwp-cloudflare-dyndns.sh`.
 12. Restart the cron server to make sure the new job is actioned with `sudo service cron reload`.
