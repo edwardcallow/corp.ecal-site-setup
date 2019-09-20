@@ -99,6 +99,13 @@ corp.ecal network site landing page config
 #### Manage VPN users
 
 ##### Add or edit a user
-1. Download the script with `wget 
+1. Download the script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/add_vpn_user.sh`.
+2. Run the script with `sudo sh add_vpn_user.sh 'username.to.add' 'new.password'`.
+
+##### Delete a user
+1. Download the script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/del_vpn_user.sh`.
+2. Run the script with `sudo sh del_vpn_user.sh 'username.to.delete'`.
 
 #### Change the shared secret
+1. Open ‘/etc/ipsec.secrets’ and change the listed key in quotemarks.
+2. Restart services with `service ipsec restart` and `service xl2tp restart`.
