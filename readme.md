@@ -68,6 +68,6 @@ corp.ecal network site landing page config
 3. Follow the Certbot installer.
 4. Generate a combined certificate and private key file by running the following command (replacing ‘pihole.example.com’ with the domain or subdomain to be used):
 
-	sudo cat /etc/letsencrypt/live/pihole.example.com/privkey.pem \
+	`sudo cat /etc/letsencrypt/live/pihole.example.com/privkey.pem \
 	/etc/letsencrypt/live/pihole.example.com/cert.pem | \
-	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
+	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem`
