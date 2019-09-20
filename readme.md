@@ -51,13 +51,13 @@ corp.ecal network site landing page config
 5. Run the installer with `sudo sh vpnsetup.sh`.
 6. Open ‘/etc/iptables.rules’ and add the following lines the the end:
 
-	\# For IPsec/L2TP  
+	` \# For IPsec/L2TP  
 	iptables -I FORWARD 2 -i ppp+ -d 172.16.0.0/16 -j ACCEPT  
-	iptables -I FORWARD 2 -s 172.16.0.0/16 -o ppp+ -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT  
+	iptables -I FORWARD 2 -s 172.16.0.0/16 -o ppp+ -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT  `
 	
-	\# For IPsec/XAuth ("Cisco IPsec")  
+	` \# For IPsec/XAuth ("Cisco IPsec")  
 	iptables -I FORWARD 2 -s 192.168.43.0/24 -d 172.16.0.0/16 -j ACCEPT  
-	iptables -I FORWARD 2 -s 172.16.0.0/16 -d 192.168.43.0/24 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT  
+	iptables -I FORWARD 2 -s 172.16.0.0/16 -d 192.168.43.0/24 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT  `
 
 7. Replace ‘172.16.10.0/16’ with the IP range and subnet for your network.
 8. Reboot with `sudo reboot`.
@@ -68,6 +68,6 @@ corp.ecal network site landing page config
 3. Follow the Certbot installer.
 4. Generate a combined certificate and private key file by running the following command (replacing ‘pihole.example.com’ with the domain or subdomain to be used):
 
-	`sudo cat /etc/letsencrypt/live/pihole.example.com/privkey.pem \
-	/etc/letsencrypt/live/pihole.example.com/cert.pem | \
+	`sudo cat /etc/letsencrypt/live/pihole.example.com/privkey.pem \  
+	/etc/letsencrypt/live/pihole.example.com/cert.pem | \  
 	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem`
