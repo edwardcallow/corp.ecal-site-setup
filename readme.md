@@ -1,4 +1,4 @@
-corp.ecal network site landing page config
+corp.ecal network site server config
 --
 
 ### Section 1: Preperation
