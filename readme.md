@@ -44,7 +44,7 @@ corp.ecal network site landing page config
 6. Reboot with `sudo reboot`.
 
 ### Section 6: VPN
-1. Download the VPN setup script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/vpnsetup.sh -O vpnsetup.sh`.
+1. Download the VPN setup script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/vpnsetup.sh -O vpn/vpnsetup.sh`.
 2. Replace ‘your pre shared key’ on line 27 with your chosen shared secret. 
 3. Replace ‘your.user.name’ on line 28 with your first user’s username.
 4. Replace ‘your password’ on line 29 with your first user’s password.
@@ -84,7 +84,9 @@ corp.ecal network site landing page config
 4. Open and make any relevant changes to ‘landing.php’.
 5. Choose an accent colour in ‘style.css’.
 
-### Section 9: Port forwarding (Optional)
+### Option steps
+
+#### Port forwarding
 1. Forward the following ports to the server via the router administration page:
 
 	TCP port 80 (HTTP)  
@@ -93,3 +95,10 @@ corp.ecal network site landing page config
 	UDP port 4500 (IPSec)  
 
 2. Test the forwarding and web server by attempting to access the landing page and Pi-hole admin page from an external network.
+
+#### Manage VPN users
+
+##### Add or edit a user
+1. Download the script with `wget 
+
+#### Change the shared secret
