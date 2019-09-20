@@ -18,7 +18,7 @@ corp.ecal network site landing page config
 2. Enter a new hostname in Network options > Change hostname.
 3. Change the memory allocation in Advanced options > Memory split.
 4. Expand the file system in Advanced options > Expand filesystem.
-5. Reboot.
+5. Reboot with `sudo reboot`.
 
 ### Section 4 – dynamic DNS
 1. Make a new directory to keep things tidy with `mkdir cloudflare`.
@@ -34,3 +34,11 @@ corp.ecal network site landing page config
 10. Start setting up a cron job to automate the updating with `crontab -e`, then choosing a text editor.
 11. Add a new line to the bottom of the crontab file (changing the timing stars as appropriate – default every five minutes) – `*/5 * * * * /bin/bash /home/pi/cloudflare/lwp-cloudflare-dyndns.sh`.
 12. Restart the cron server to make sure the new job is actioned with `sudo service cron reload`.
+
+### Section 5 – Pi-hole
+1. Start the Pi-hole installer with `curl -sSL https://install.pi-hole.net | bash`.
+2. Follow the Pi-hole installer.
+3. Once the installer’s finished, reset the admin password for Pi-hole with `pihole -a -p`.
+4. Finish setting up Pi-hole via the web interface.
+5. Change the interfaces Pi-hole listens on (via Settings > DNS > Interface listening behaviour) to ‘Listen on all interfaces’.
+6. Reboot with `sudo reboot`.
