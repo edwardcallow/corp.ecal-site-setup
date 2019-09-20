@@ -109,3 +109,12 @@ corp.ecal network site landing page config
 #### Change the shared secret
 1. Open ‘/etc/ipsec.secrets’ and change the listed key in quotemarks.
 2. Restart services with `service ipsec restart` and `service xl2tp restart`.
+
+### For reference
+- [Cloudflare dynamic DNS configuration](https://letswp.io/cloudflare-as-dynamic-dns-raspberry-pi/)
+- [Pi and Pi-hole configuration](https://gist.github.com/bnutz/89eabf55335869444b61060e18cea4e5)
+- [IPSec configuration](https://github.com/hwdsl2/setup-ipsec-vpn)
+- [SSL configuration](https://discourse.pi-hole.net/t/enabling-https-for-your-pi-hole-web-interface/5771)
+- [Managing VPN users](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/manage-users.md)
+- [Configuring VPN clients for XAuth IPSec](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/clients-xauth.md)
+- [Configuring VPN clients for L2TP IPSec](https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/docs/clients.md)
