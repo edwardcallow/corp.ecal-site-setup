@@ -87,7 +87,7 @@ corp.ecal network site landing page config
 ### Section 9: Port forwarding (Optional)
 1. Forward the following ports to the server via the router administration page:
 
-	TCP port 80 (HTTP)
-	TCP port 443 (HTTPS)
-	UDP port 500 (IPSec)
-	UDP port 4500 (IPSec)
+	TCP port 80 (HTTP)  
+	TCP port 443 (HTTPS)  
+	UDP port 500 (IPSec)  
+	UDP port 4500 (IPSec)  
