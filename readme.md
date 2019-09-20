@@ -49,12 +49,15 @@ corp.ecal network site landing page config
 3. Replace ‘your.user.name’ on line 28 with your first user’s username.
 4. Replace ‘your password’ on line 29 with your first user’s password.
 5. Run the installer with `sudo sh vpnsetup.sh`.
-6. Open ‘/etc/iptables.rules’ and all the following lines:
+6. Open ‘/etc/iptables.rules’ and add the following lines the the end:
 
 	\# For IPsec/L2TP  
-	iptables -I FORWARD 2 -i ppp+ -d 192.168.0.0/24 -j ACCEPT  
-	iptables -I FORWARD 2 -s 192.168.0.0/24 -o ppp+ -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT  
+	iptables -I FORWARD 2 -i ppp+ -d 172.16.0.0/16 -j ACCEPT  
+	iptables -I FORWARD 2 -s 172.16.0.0/16 -o ppp+ -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT  
 	
 	\# For IPsec/XAuth ("Cisco IPsec")  
-	iptables -I FORWARD 2 -s 192.168.43.0/24 -d 192.168.0.0/24 -j ACCEPT  
-	iptables -I FORWARD 2 -s 192.168.0.0/24 -d 192.168.43.0/24 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+	iptables -I FORWARD 2 -s 192.168.43.0/24 -d 172.16.0.0/16 -j ACCEPT  
+	iptables -I FORWARD 2 -s 172.16.0.0/16 -d 192.168.43.0/24 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT  
+
+7. Replace ‘172.16.10.0/16’ with the IP range and subnet for your network.
+8. Reboot with `sudo reboot`.
