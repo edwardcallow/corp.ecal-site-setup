@@ -84,7 +84,7 @@ corp.ecal network site landing page config
 4. Open and make any relevant changes to ‘landing.php’.
 5. Choose an accent colour in ‘style.css’.
 
-### Option steps
+### Optional steps
 
 #### Port forwarding
 1. Forward the following ports to the server via the router administration page:
