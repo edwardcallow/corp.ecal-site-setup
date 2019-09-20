@@ -83,3 +83,11 @@ corp.ecal network site landing page config
 3. Delete the unnecessary readme with `sudo rm readme.md`.
 4. Open and make any relevant changes to ‘landing.php’.
 5. Choose an accent colour in ‘style.css’.
+
+### Section 9: Port forwarding (Optional)
+1. Forward the following ports to the server via the router administration page:
+
+	TCP port 80 (HTTP)
+	TCP port 443 (HTTPS)
+	UDP port 500 (IPSec)
+	UDP port 4500 (IPSec)
