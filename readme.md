@@ -5,7 +5,7 @@ corp.ecal network site server config
 ### Section 1: Preperation
 1. Download the latest version of Raspbian lite from the [Raspberry Pi Foundation website](https://www.raspberrypi.org/downloads/raspbian/).
 2. Write it to an SD card using [Etcher](https://www.balena.io/etcher/).
-3. Create a blank file called ‘ssh’ to enable headless SSH access.
+3. Create a blank file on the card called ‘ssh’ to enable headless SSH access.
 
 ### Section 2: Updates
 1. Sign in with the default credentials – `pi:raspberry`.
