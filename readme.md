@@ -1,5 +1,6 @@
-corp.ecal network site server config
+corp.ecal-site-setup
 --
+corp.ecal network site server config
 
 ### Section 1: Preperation
 1. Download the latest version of Raspbian lite from the [Raspberry Pi Foundation website](https://www.raspberrypi.org/downloads/raspbian/).
