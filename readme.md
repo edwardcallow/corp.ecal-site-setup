@@ -91,3 +91,5 @@ corp.ecal network site landing page config
 	TCP port 443 (HTTPS)  
 	UDP port 500 (IPSec)  
 	UDP port 4500 (IPSec)  
+
+2. Test the forwarding and web server by attempting to access the landing page and Pi-hole admin page from an external network.
