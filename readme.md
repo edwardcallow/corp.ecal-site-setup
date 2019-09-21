@@ -53,13 +53,15 @@ corp.ecal network site server config
 6. Run the installer with `sudo sh vpnsetup.sh`.
 7. Open ‘/etc/iptables.rules’ and add the following lines to the end (replacing ‘172.16.10.0/16’ with the IP range and subnet for your network):
 
-	\# For IPsec/L2TP  
-	iptables -I FORWARD 2 -i ppp+ -d 172.16.0.0/16 -j ACCEPT  
-	iptables -I FORWARD 2 -s 172.16.0.0/16 -o ppp+ -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT  
+````
+# For IPsec/L2TP
+iptables -I FORWARD 2 -i ppp+ -d 172.16.0.0/16 -j ACCEPT
+iptables -I FORWARD 2 -s 172.16.0.0/16 -o ppp+ -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
 	
-	\# For IPsec/XAuth ("Cisco IPsec")  
-	iptables -I FORWARD 2 -s 192.168.43.0/24 -d 172.16.0.0/16 -j ACCEPT  
-	iptables -I FORWARD 2 -s 172.16.0.0/16 -d 192.168.43.0/24 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT  
+# For IPsec/XAuth ("Cisco IPsec")
+iptables -I FORWARD 2 -s 192.168.43.0/24 -d 172.16.0.0/16 -j ACCEPT
+iptables -I FORWARD 2 -s 172.16.0.0/16 -d 192.168.43.0/24 -m conntrack --ctstate RELATED,ESTABLISHED -j ACCEPT
+````
 
 7. Reboot with `sudo reboot`.
 
