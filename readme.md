@@ -24,7 +24,7 @@ corp.ecal network site server config
 ### Section 4: Dynamic DNS
 1. Make a new directory to keep things tidy with `mkdir cloudflare`.
 2. Enter the new directory with `cd cloudflare`.
-3. Download the setup script with `wget https://git.io/JeseG`.
+3. Download the setup script with `wget https://git.io/JeseG -O lwp-cloudflare-dyndns.sh`.
 4. Replace ‘email@example.com’ on line 8 with the Cloudflare account email address.
 5. Replace ‘global_api_key_goes_here’ on line 9 with the global API key, available under Cloudflare account settings.
 6. Replace ‘example.com’ on line 10 with the root domain to be used.
@@ -100,11 +100,11 @@ corp.ecal network site server config
 #### Manage VPN users
 
 ##### Add or edit a user
-1. Download the script with `wget https://git.io/Jesel`.
+1. Download the script with `wget https://git.io/Jesel -O vpn/add_vpn_user.sh`.
 2. Run the script with `sudo sh add_vpn_user.sh 'username.to.add' 'new.password'`.
 
 ##### Delete a user
-1. Download the script with `wget https://git.io/Jese8`.
+1. Download the script with `wget https://git.io/Jese8 -O vpn/del_vpn_user.sh`.
 2. Run the script with `sudo sh del_vpn_user.sh 'username.to.delete'`.
 
 #### Change the shared secret
