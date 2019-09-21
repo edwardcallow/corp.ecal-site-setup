@@ -24,7 +24,7 @@ corp.ecal network site server config
 ### Section 4: Dynamic DNS
 1. Make a new directory to keep things tidy with `mkdir cloudflare`.
 2. Enter the new directory with `cd cloudflare`.
-3. Download the setup script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/lwp-cloudflare-dyndns.sh`.
+3. Download the setup script with `wget https://git.io/JeseG`.
 4. Replace ‘email@example.com’ on line 8 with the Cloudflare account email address.
 5. Replace ‘global_api_key_goes_here’ on line 9 with the global API key, available under Cloudflare account settings.
 6. Replace ‘example.com’ on line 10 with the root domain to be used.
@@ -46,7 +46,7 @@ corp.ecal network site server config
 
 ### Section 6: VPN
 1. Make a new directory to keep things tidy with `mkdir vpn`.
-2. Download the VPN setup script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/vpnsetup.sh -O vpn/vpnsetup.sh`.
+2. Download the VPN setup script with `wget https://git.io/Jesec -O vpn/vpnsetup.sh`.
 3. Replace ‘your pre shared key’ on line 27 with your chosen shared secret. 
 4. Replace ‘your.user.name’ on line 28 with your first user’s username.
 5. Replace ‘your password’ on line 29 with your first user’s password.
@@ -74,12 +74,12 @@ corp.ecal network site server config
 	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
 
 5. Make sure the lighttpd user (www-data) can read the certificates with `sudo chown www-data -R /etc/letsencrypt/live`.
-6. Open ‘/etc/lighttpd/external.conf’ and add the contents of `https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/external.conf` to the end (replacing ‘pihole.example.com’ with the domain or subdomain to be used).
+6. Open ‘/etc/lighttpd/external.conf’ and add the contents of `[https://git.io/JeseC]` to the end (replacing ‘pihole.example.com’ with the domain or subdomain to be used).
 7. Restart the web server with `sudo service lighttpd restart`.
 8. Reboot with `sudo reboot`.
 
 ### Section 8: Landing page
-1. Download the [Landing page template](https://github.com/edwardcallow/corp.ecal-landing) with `git clone https://github.com/edwardcallow/corp.ecal-landing.git /var/www/html`.
+1. Download the [Landing page template](https://github.com/edwardcallow/corp.ecal-landing) with `git clone https://git.io/JeseW /var/www/html`.
 2. Enter the web server root directory with `cd /var/www/html`.
 3. Delete the unnecessary readme with `sudo rm readme.md`.
 4. Open and make any relevant changes to ‘landing.php’.
@@ -100,11 +100,11 @@ corp.ecal network site server config
 #### Manage VPN users
 
 ##### Add or edit a user
-1. Download the script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/add_vpn_user.sh`.
+1. Download the script with `wget https://git.io/Jesel`.
 2. Run the script with `sudo sh add_vpn_user.sh 'username.to.add' 'new.password'`.
 
 ##### Delete a user
-1. Download the script with `wget https://raw.githubusercontent.com/edwardcallow/corp.ecal-site-setup/master/del_vpn_user.sh`.
+1. Download the script with `wget https://git.io/Jese8`.
 2. Run the script with `sudo sh del_vpn_user.sh 'username.to.delete'`.
 
 #### Change the shared secret
