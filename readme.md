@@ -71,9 +71,11 @@ iptables -I FORWARD 2 -s 172.16.0.0/16 -d 192.168.43.0/24 -m conntrack --ctstate
 3. Follow the Certbot installer.
 4. Generate a combined certificate and private key file by running the following command (replacing ‘pihole.example.com’ with the domain or subdomain to be used):
 
-	sudo cat /etc/letsencrypt/live/pihole.example.com/privkey.pem \  
-	/etc/letsencrypt/live/pihole.example.com/cert.pem | \  
-	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
+````
+sudo cat /etc/letsencrypt/live/pihole.example.com/privkey.pem \  
+/etc/letsencrypt/live/pihole.example.com/cert.pem | \  
+sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
+````
 
 5. Make sure the lighttpd user (www-data) can read the certificates with `sudo chown www-data -R /etc/letsencrypt/live`.
 6. Open ‘/etc/lighttpd/external.conf’ and add the contents of ‘[https://git.io/JeseC](https://git.io/JeseC)’ to the end (replacing ‘pihole.example.com’ with the domain or subdomain to be used).
