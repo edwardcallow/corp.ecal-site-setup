@@ -74,7 +74,7 @@ corp.ecal network site server config
 	sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
 
 5. Make sure the lighttpd user (www-data) can read the certificates with `sudo chown www-data -R /etc/letsencrypt/live`.
-6. Open ‘/etc/lighttpd/external.conf’ and add the contents of `[https://git.io/JeseC]` to the end (replacing ‘pihole.example.com’ with the domain or subdomain to be used).
+6. Open ‘/etc/lighttpd/external.conf’ and add the contents of ‘[https://git.io/JeseC](https://git.io/JeseC)’ to the end (replacing ‘pihole.example.com’ with the domain or subdomain to be used).
 7. Restart the web server with `sudo service lighttpd restart`.
 8. Reboot with `sudo reboot`.
 
