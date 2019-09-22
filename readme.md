@@ -3,9 +3,9 @@ corp.ecal-site-setup
 corp.ecal network site server config
 
 ### Section 1: Preperation
-1. Download the latest version of Raspbian lite from the [Raspberry Pi Foundation website](https://www.raspberrypi.org/downloads/raspbian/).
+1. Download version XYZ of Raspbian lite from the [Raspberry Pi Foundation website](https://www.raspberrypi.org/downloads/raspbian/).
 2. Write it to an SD card using [Etcher](https://www.balena.io/etcher/).
-3. Create a blank file on the card called ‘ssh’ to enable headless SSH access.
+3. Create a blank file on the card's boot partition called ‘ssh’ to enable headless SSH access.
 
 ### Section 2: Updates
 1. Sign in with the default credentials – `pi:raspberry`.
@@ -34,7 +34,7 @@ corp.ecal network site server config
 10. Run the file with `sudo sh lwp-cloudflare-dyndns.sh`. The IP will be updated and three new files should be generated.
 11. Start setting up a cron job to automate the updating with `crontab -e`, then choosing a text editor.
 12. Add a new line to the bottom of the crontab file (changing the timing stars as appropriate – default every five minutes) – `*/5 * * * * /bin/bash /home/pi/cloudflare/lwp-cloudflare-dyndns.sh`.
-13. Restart the cron server to make sure the new job is actioned with `sudo service cron reload`.
+13. Restart the cron service to make sure the new job is actioned with `sudo service cron reload`.
 
 ### Section 5: Pi-hole
 1. Start the Pi-hole installer with `curl -sSL https://install.pi-hole.net | bash`.
@@ -84,7 +84,7 @@ sudo tee /etc/letsencrypt/live/pihole.example.com/combined.pem
 
 ### Section 8: Landing page
 1. Download the [Landing page template](https://github.com/edwardcallow/corp.ecal-landing) with `git clone https://git.io/JeseW /var/www/html`.
-2. Enter the web server root directory with `cd /var/www/html`.
+2. Navigate to the web server root directory with `cd /var/www/html`.
 3. Delete the unnecessary readme with `sudo rm readme.md`.
 4. Open and make any relevant changes to ‘landing.php’.
 5. Choose an accent colour in ‘style.css’.
